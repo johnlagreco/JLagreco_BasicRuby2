@@ -24,7 +24,24 @@ def word_counter(text)
 	# Here we are making our term "counts" equal to our new Hash using the new ruby word and we are starting at the word positiion 0 being the first word in the block of text.
 	words_array.each do |word|
 	# Here we are telling our program to go through each word and do the function to each word thus looping back to the position 0 each time and thus making it a key by itself by using the pipes.
+	counts[word] += 1
+	  puts counts 
+    end
+    # Here we are telling the program to count the words which are keys now to find the same word and when it finds another word like itself to add 1 to the value now associated with the frequency of that words occurences. Puts prints the result and end closes the do ruby functional word.
+    max_used_word = counts.sort_by{ |words, word_counts| word_counts}.last
+    puts max_used_word
+    return max_used_word
+end
+	# Here we made a phrase equal to the counted words now keys and sort them by frequency and place the values to the right of the keys in a Hash and stopped at the last word in the block. We then are printing the maximum word used and also having the most used word returned by the program. end closes out the initial def ruby functional word.
 
-	
+word_counter(large_block)
+	# This last line calls our program word_counter in use and goes through the large block of text which is in the parentheses. If we command-out the large block of text and put any large amount of text in the parentheses of line 37, the program will run the fuction through that new text entered.  
+
+
+
+
+
+
+
 
 
